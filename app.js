@@ -12,7 +12,7 @@ app.use(express.json());
 app.set('view engine', 'ejs');
 
 // database connection
-const dbURI = 'mongodb+srv://hluchetu:hum123@cluster0.6frs1.mongodb.net/Cluster0?retryWrites=true&w=majority';
+const dbURI = 'mongodb+srv://hluchetu:<password>@cluster0.6frs1.mongodb.net/Cluster0?retryWrites=true&w=majority';
 mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex:true })
   .then((result) => app.listen(3000))
   .catch((err) => console.log(err));
